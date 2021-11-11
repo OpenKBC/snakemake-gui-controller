@@ -2,7 +2,7 @@
 This is pipeline controller(SnakeMake) for pipeline container by using Flask, Jinja2 and Bootstrap. This controller provides config.yaml form for executing snakemake and it will execute the workflow after submission.
 
 ### Warning
-* Current version has a problem with CRSF token. If you have BAD REQUEST error, click refresh button on your browser(Sorry!)
+* Current version has a problem with CSRF token. If you have BAD REQUEST error, click refresh button on your browser(Sorry!)
 
 ### Version history (Development phase)
 * version(v1.0.2) docker-compose is ready
