@@ -4,6 +4,8 @@ services:
     build:
       context: ./pipeline_controller
     image: swiri021/snakemake-gui-controller:v1.0.2
+    # Change volumes to your path
+    # /your-git-clone-folder/snakemake-gui-controller/pipelines:/pipeline_controller/pipelines
     volumes:
       - /Users/junheeyoon/Desktop/OpenKBC/snakemake-gui-controller/pipelines:/pipeline_controller/pipelines
     ports:
@@ -27,6 +29,8 @@ services:
     build:
       context: ./pipeline_controller
     image: swiri021/snakemake-gui-controller-celery:v1.0.2
+    # Change volumes to your path
+    # /your-git-clone-folder/snakemake-gui-controller/pipelines:/pipeline_controller/pipelines
     volumes:
       - /Users/junheeyoon/Desktop/OpenKBC/snakemake-gui-controller/pipelines:/pipeline_controller/pipelines
     deploy:

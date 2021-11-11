@@ -22,11 +22,19 @@ This is pipeline controller(SnakeMake) for pipeline container by using Flask, Ji
 |---|---test-pipeline1/
 |---|---test-pipeline2/
 ```
-- Install requirements
-
+- Before running docker, please change path(Line 9 and Line 34) in **docker-compose.yaml**
+```yaml
+# Line 9 and 34
+# Change volumes to your path
+    # /your-git-clone-folder/snakemake-gui-controller/pipelines:/pipeline_controller/pipelines
+    volumes:
+      - /Users/junheeyoon/Desktop/OpenKBC/snakemake-gui-controller/pipelines:/pipeline_controller/pipelines
 ```
-pip install -r pipeline_controller/requirements.txt
-Rscript pipeline_controller/installer_Rpackage.R
+
+
+- Docker-compose:
+```
+docker-compose up --build
 ```
 
 ### Usage
