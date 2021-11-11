@@ -1,0 +1,13 @@
+rule all:
+    input:
+        config["Output"]["Path"]+config["Output"]["Name"]
+
+rule sum:
+    input: config["InputFolder"]
+    output: config["Output"]["Path"]+"interim.txt"
+    shell: "python import_files/sum.py {input} {output}"
+
+rule putter:
+    input: config["Output"]["Path"]+"interim.txt"
+    output: config["Output"]["Path"]+config["Output"]["Name"]
+    shell: "python import_files/put_string.py {input} {output}"

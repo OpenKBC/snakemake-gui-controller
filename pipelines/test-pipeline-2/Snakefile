@@ -1,0 +1,8 @@
+rule all:
+    input:
+        config["OutputFolder"]
+
+rule sum:
+    input: config["InputFolder"]
+    output: config["OutputFolder"]
+    shell: "python import_files/sum.py {input} {output}"

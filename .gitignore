@@ -1,0 +1,13 @@
+# MAC
+.DS_Store
+
+# Python
+__pycache__/
+.snakemake
+
+# Custom Result folders
+resultFiles
+exprMatrix
+ActMatrix
+FEResult
+logs
