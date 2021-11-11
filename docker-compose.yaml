@@ -1,8 +1,6 @@
 version: "3"
 services:
   pipelines: # Pipelines
-    build:
-      context: ./pipeline_controller
     image: swiri021/snakemake-gui-controller:v1.0.2
     # Change volumes to your path
     # /your-git-clone-folder/snakemake-gui-controller/pipelines:/pipeline_controller/pipelines
@@ -12,7 +10,6 @@ services:
       - 80:5000
     depends_on:
       - redis
-    container_name: pipelineContainer
     working_dir: /pipeline_controller
     command: conda run -n pipeline_controller_base gunicorn --bind 0.0.0.0:5000 --workers 2 --threads 4 --worker-class gthread connector:app
     #command: tail -f /dev/null (Testing purpose)
@@ -26,9 +23,7 @@ services:
     container_name: scRedisServer
 
   celery: # celery
-    build:
-      context: ./pipeline_controller
-    image: swiri021/snakemake-gui-controller-celery:v1.0.2
+    image: swiri021/snakemake-gui-controller:v1.0.2
     # Change volumes to your path
     # /your-git-clone-folder/snakemake-gui-controller/pipelines:/pipeline_controller/pipelines
     volumes:
