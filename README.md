@@ -1,6 +1,9 @@
 ## Pipeline Controller
 * This is pipeline controller(SnakeMake) for pipeline container by using Flask, Jinja2 and Bootstrap. This controller provides config.yaml form for executing snakemake and it will execute the workflow after submission.
 * Docker location: https://github.com/OpenKBC/snakemake-gui-controller-image
+* Images status: 
+[![Docker Image CI](https://github.com/OpenKBC/snakemake-gui-controller-image/actions/workflows/docker-image.yml/badge.svg)](https://github.com/OpenKBC/snakemake-gui-controller-image/actions/workflows/docker-image.yml)
+[![Pytest for images](https://github.com/OpenKBC/snakemake-gui-controller-image/actions/workflows/python-app.yml/badge.svg)](https://github.com/OpenKBC/snakemake-gui-controller-image/actions/workflows/python-app.yml)
 
 ### Warning
 * Current version has a problem with CSRF token. If you have BAD REQUEST error, click refresh button on your browser(Sorry!)
