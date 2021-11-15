@@ -9,15 +9,15 @@
 * Current version has a problem with CSRF token. If you have BAD REQUEST error, click refresh button on your browser(Sorry!)
 
 ### Version history (Development phase)
-* version(v1.0.2) docker-compose is ready
+* version(v1.0.2) docker-compose
 * version(v1.0.1) imported celery-redis for workers and communication
 * version(v1.0.0) does not have loading spinner, please wait for browser spinne instead of it
 
 ### Requirements
 - The controller should be located to same root folder with pipeline folders
 - All pipelines should have same snakefile name(Snakemake) and configuration(config.yaml)
-- Memory usage: 4-5gb for DEG pipeline (Please change your docker manager setting for this)
-- Requirements of pipeline needs to be imported on the pipeline_controller requirements.txt
+- Don't change Dockerfile in pipelines
+- Requirements of pipeline(requirements.txt) needs to be copied to pipelines/ folder
 - Structure example:
 ```
 (root)
