@@ -6,7 +6,7 @@ count_start = 0
 with open(argv[1], "r") as f:
     data = f.read()
 
-time.sleep(2)
+time.sleep(3)
 
 with open(argv[2], "w") as rw:
     rw.write(data+("-this is test result"))
