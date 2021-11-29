@@ -19,7 +19,7 @@
 - The controller should be located to same root folder with pipeline folders
 - All pipelines should have same snakefile name(Snakemake) and configuration(config.yaml)
 - Don't change Dockerfile in pipelines
-- Requirements of pipeline(requirements.txt) needs to be copied to pipelines/ folder
+- Requirements of pipeline(requirements.txt) needs to be copied to pipelines/ folder(copy to requirements.txt inside pipelines/ folder)
 - Structure example:
 ```
 (root)
