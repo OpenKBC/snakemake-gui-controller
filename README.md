@@ -9,15 +9,17 @@
 * Current version has a problem with CSRF token. If you have BAD REQUEST error, click refresh button on your browser(Sorry!)
 
 ### Version history (Development phase)
+* version(v1.0.4) Updated log process
+* version(v1.0.3) bug fix
 * version(v1.0.2) docker-compose
-* version(v1.0.1) imported celery-redis for workers and communication
-* version(v1.0.0) does not have loading spinner, please wait for browser spinne instead of it
+* version(v1.0.1) imported celery-redis for workers and communication, loading spinner
+* version(v1.0.0) Initial launch
 
 ### Requirements
 - The controller should be located to same root folder with pipeline folders
 - All pipelines should have same snakefile name(Snakemake) and configuration(config.yaml)
 - Don't change Dockerfile in pipelines
-- Requirements of pipeline(requirements.txt) needs to be copied to pipelines/ folder
+- Requirements of pipeline(requirements.txt) needs to be copied to pipelines/ folder(copy to requirements.txt inside pipelines/ folder)
 - Structure example:
 ```
 (root)

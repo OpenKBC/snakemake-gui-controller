@@ -12,7 +12,7 @@ services:
     depends_on:
       - redis
     working_dir: /pipeline_controller
-    command: conda run -n pipeline_controller_base gunicorn --bind 0.0.0.0:5000 --workers 2 --threads 4 --worker-class gthread connector:app
+    command: conda run -vv -n pipeline_controller_base gunicorn --bind 0.0.0.0:5000 --workers 2 --threads 4 --worker-class gthread connector:app
     #command: tail -f /dev/null #(Testing purpose)
     container_name: snakemakeController
 
@@ -35,7 +35,7 @@ services:
         limits:
           memory: 8000m
     working_dir: /pipeline_controller
-    command: conda run -n pipeline_controller_base celery -A app.celery worker --loglevel=info
+    command: conda run -vv -n pipeline_controller_base celery -A app.celery worker --loglevel=info
     #command: tail -f /dev/null #(Testing purpose)
     depends_on:
       - redis
