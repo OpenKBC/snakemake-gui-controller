@@ -9,6 +9,7 @@
 * Current version has a problem with CSRF token. If you have BAD REQUEST error, click refresh button on your browser(Sorry!)
 
 ### Version history (Development phase)
+* version(v1.0.5) Updated DAG function for testing purpose
 * version(v1.0.4) Updated log process
 * version(v1.0.3) bug fix
 * version(v1.0.2) docker-compose
